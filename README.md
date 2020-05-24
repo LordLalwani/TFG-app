@@ -13,9 +13,9 @@
     gatsby develop || npm run dev
     ```
 
-    Your site is now running at `http://localhost:8000`!
+  Your site is now running at `http://localhost:8000`!
     
-    Note: You'll also see a second link: _`http://localhost:8000/___graphql`_.
+  Note: You'll also see a second link: _`http://localhost:8000/___graphql`_.
 
 ## Gatsby Specific File Structure
 
