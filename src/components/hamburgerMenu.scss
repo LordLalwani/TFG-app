@@ -12,42 +12,61 @@
         height: 0.1rem;
         background-color: black;
         transition: all 300ms ease 0s;
-        outline:0!important;
+        outline: 0 !important;
     }
 
     &:focus {
         outline: none;
     }
 
-    .Hamburger-one {
+    .Hamburger-one-toggledOff {
         top: 7px;
         left: 0px;
         right: 0px;
     }
 
-    .Hamburger-two {
+    .Hamburger-one-toggledOn {
+        top: 7px;
+        left: 0px;
+        right: 0px;
+        transform: rotate(45deg) translate(4px, 4px);
+    }
+
+    .Hamburger-two-toggledOff {
         top: 14px;
         left: 0px;
         right: 0px;
     }
+    .Hamburger-two-toggledOn {
+        top: 14px;
+        left: 0px;
+        right: 0px;
+        opacity: 0;
+    }
 
-    .Hamburger-three {
+    .Hamburger-three-toggledOff {
         top: 21px;
         left: 0px;
         right: 0px;
     }
+    .Hamburger-three-toggledOn {
+        top: 21px;
+        left: 0px;
+        right: 0px;
+        transform: rotate(-45deg) translate(5px, -6px);
+    }
 
     &:hover {
         cursor: pointer;
-        .Hamburger-one {
+        .Hamburger-one-toggledOff {
             right: 40%;
             transition: 0.5s;
         }
-        .Hamburger-two {
+        .Hamburger-two-toggledOff {
             left: 40%;
             transition: 0.5s;
         }
-        .Hamburger-three {
+        .Hamburger-three-toggledOff {
             right: 40%;
             transition: 0.5s;
         }

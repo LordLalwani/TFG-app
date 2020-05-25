@@ -5,14 +5,16 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
+import React, { useContext } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import { ThemeContext } from "../contexts/themeContext";
 
 import Header from "./header"
 import "./layout.css"
 
 const Layout = ({ children }) => {
+  const { hamburgerMenuIsActive } = useContext(ThemeContext);
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -33,7 +35,7 @@ const Layout = ({ children }) => {
           padding: `0 1.0875rem 1.45rem`,
         }}
       >
-        <main>{children}</main>
+        <main>{hamburgerMenuIsActive ? <div>menu</div> : children}</main>
         <footer>
           © {new Date().getFullYear()}, Built with
           {` `}
