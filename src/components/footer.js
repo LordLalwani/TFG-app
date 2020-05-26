@@ -1,15 +1,13 @@
 import React from 'react';
-import Fade from 'react-fade-opacity'
-import "./menu.scss"
-import "./footer.scss"
-import * as logo from "../images/fearless-logo.svg"
+import * as logo from "../images/fearless-logo.svg";
+import "./footer.scss";
 
 const Footer = () => {
     return (
             <footer className="footer">
                 <section className="footer-container">
                     <img src={logo} className="footer-img"></img>
-                    <div className="footer-menu">
+                    <div>
                         <a className="footer-menu-item" href="/"><span>Home</span></a>
                         <a className="footer-menu-item" href="/"><span>Our Work</span></a>
                         <a className="footer-menu-item" href="/"><span>Services</span></a>
