@@ -9,6 +9,7 @@ import React, { useContext } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { ThemeContext } from "../contexts/themeContext";
+import Menu from "./menu"
 
 import Header from "./header"
 import "./layout.css"
@@ -29,18 +30,18 @@ const Layout = ({ children }) => {
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
-        style={{
+        style={!hamburgerMenuIsActive ? {
           margin: `0 auto`,
           maxWidth: 960,
           padding: `0 1.0875rem 1.45rem`,
-        }}
+        } : {}}
       >
-        <main>{hamburgerMenuIsActive ? <div>menu</div> : children}</main>
-        <footer>
+        <main>{hamburgerMenuIsActive ? <Menu /> : <div className="fadeIn">{children}</div>}</main>
+        {hamburgerMenuIsActive ? <div /> : <footer className="fadeIn">
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+        </footer>}
       </div>
     </>
   )
