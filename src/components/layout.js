@@ -10,6 +10,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { ThemeContext } from "../contexts/themeContext";
 import Menu from "./menu"
+import Footer from "./footer"
 
 import Header from "./header"
 import "./layout.css"
@@ -37,11 +38,7 @@ const Layout = ({ children }) => {
         } : {}}
       >
         <main>{hamburgerMenuIsActive ? <Menu /> : <div className="fadeIn">{children}</div>}</main>
-        {hamburgerMenuIsActive ? <div /> : <footer className="fadeIn">
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>}
+        {hamburgerMenuIsActive ? <div /> : <Footer />}
       </div>
     </>
   )

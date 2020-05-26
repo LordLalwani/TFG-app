@@ -1,0 +1,67 @@
+.footer {
+    background-color: #f6f8fa;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    padding: 2.375rem 1.5625rem 3.25rem;
+
+    font-family: Gilroy-Light;
+    font-size: .875rem;
+    line-height: 1.125rem;
+}
+
+@font-face {
+    font-family: 'Gilroy-Light';
+    src: local('Gilroy-Light'), url("../fonts/Gilroy-Light.otf") format('opentype');
+  }
+
+.footer-container {
+    max-width: 100%;
+    width: 70%;
+    margin: 0 auto;
+}
+.footer-img {
+    width: 5rem;
+}
+
+.footer-copyright {
+    float: right;
+}
+
+.footer-menu-item {
+    margin: 0 0.25rem;
+    text-decoration: none;
+    color: inherit;
+    opacity: .4;
+
+    &::after {
+        margin-left: 0.5rem;
+        content: "/";
+    }
+    &:nth-last-child(1) {
+        &::after{
+            margin-left: 0.5rem;
+            content: "";
+        }
+      }
+    &:first-child{
+        margin-left: 0;
+    }
+}
+
+.footer-text {
+    color: inherit;
+    opacity: .4;
+}
+.footer-email{
+    color: inherit;
+    opacity: .4;
+    text-decoration: none;
+}
+
+.footer-contact {
+   margin-top: 2rem
+}
