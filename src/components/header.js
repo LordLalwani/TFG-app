@@ -10,26 +10,19 @@ const classes = {
   unpinned: "header-unpin",
 }
 
-var lastKnownScrollY = 0
-var currentScrollY = 0
-var ticking = false
-var eleHeader = null
+const lastKnownScrollY = 0
+const headerComponent = null
 
-window.onload = function() {
-  eleHeader = document.getElementsByClassName("header-main")
+window.onload = function () {
+  headerComponent = document.getElementsByClassName("header-main")
   document.addEventListener("scroll", onScroll, false)
 }
-var lastKnownScrollY = 0
-function onScroll() {
+const onScroll = () => {
   const currentScrollY = window.pageYOffset
-  if(currentScrollY <= 80){
-    console.log(currentScrollY)
-    eleHeader[0].classList.remove(classes.unpinned)
-    eleHeader[0].classList.remove(classes.pinned)
-    console.log(eleHeader[0].className)
+  if (currentScrollY <= 80) {
+    headerComponent[0].classList.remove(classes.unpinned)
+    headerComponent[0].classList.remove(classes.pinned)
   }
-
-  console.log(currentScrollY)
   if (currentScrollY >= 80 && currentScrollY < lastKnownScrollY) {
     pin()
   } else if (currentScrollY >= 80 && currentScrollY > lastKnownScrollY) {
@@ -38,22 +31,20 @@ function onScroll() {
   lastKnownScrollY = currentScrollY
 }
 
-function pin() {
-  if (eleHeader[0].classList.contains(classes.unpinned)) {
-    eleHeader[0].classList.remove(classes.unpinned)
-    eleHeader[0].classList.add(classes.pinned)
+const pin = () => {
+  if (headerComponent[0].classList.contains(classes.unpinned)) {
+    headerComponent[0].classList.remove(classes.unpinned)
+    headerComponent[0].classList.add(classes.pinned)
   }
-  console.log(eleHeader[0].className)
 }
-function unpin() {
+const unpin = () => {
   if (
-    eleHeader[0].classList.contains(classes.pinned) ||
-    !eleHeader[0].classList.contains(classes.unpinned)
+    headerComponent[0].classList.contains(classes.pinned) ||
+    !headerComponent[0].classList.contains(classes.unpinned)
   ) {
-    eleHeader[0].classList.remove(classes.pinned)
-    eleHeader[0].classList.add(classes.unpinned)
+    headerComponent[0].classList.remove(classes.pinned)
+    headerComponent[0].classList.add(classes.unpinned)
   }
-  console.log(eleHeader[0].className)
 }
 
 const Header = ({ siteTitle }) => (

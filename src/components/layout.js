@@ -35,6 +35,7 @@ const Layout = ({ children }) => {
           margin: `0 auto`,
           maxWidth: 960,
           padding: `0 1.0875rem 1.45rem`,
+          paddingTop: '10rem'
         } : {}}
       >
         <main>{hamburgerMenuIsActive ? <Menu /> : <div className="fadeIn">{children}</div>}</main>
