@@ -1,17 +1,18 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
-import * as logo from "../images/fearless-logo.svg"
+import React, { useContext } from "react"
+import * as fearlessLogo from "../images/fearless-logo.svg"
+import * as fearlessLogoWhite from "../images/fearless-logo-white.svg"
 import HamburgerMenu from "../components/hamburgerMenu"
 import "./header.scss"
+import { ThemeContext } from "../contexts/themeContext";
 
 const classes = {
   pinned: "header-pin",
   unpinned: "header-unpin",
 }
 
-const lastKnownScrollY = 0
-const headerComponent = null
+let lastKnownScrollY = 0
+let headerComponent = null
 
 window.onload = function () {
   headerComponent = document.getElementsByClassName("header-main")
@@ -47,23 +48,19 @@ const unpin = () => {
   }
 }
 
-const Header = ({ siteTitle }) => (
-  <header id="header-id" className="header-main">
-    <div className="header-container">
-      <Link to="/">
-        <img src={logo} alt="" className="header-img" />
-      </Link>
-    </div>
-    <HamburgerMenu />
-  </header>
-)
+const Header = () => {
+  const { hamburgerMenuIsActive } = useContext(ThemeContext);
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
+  return (
+    <header id="header-id" className="header-main">
+      <div className="header-container">
+        <Link to="/">
+          <img src={hamburgerMenuIsActive ? fearlessLogoWhite : fearlessLogo} alt="" className="header-img" />
+        </Link>
+      </div>
+      <HamburgerMenu />
+    </header>
+  )
 }
 
 export default Header

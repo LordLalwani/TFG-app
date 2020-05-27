@@ -7,7 +7,6 @@
 
 import React, { useContext } from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 import { ThemeContext } from "../contexts/themeContext";
 import Menu from "./menu"
 import Footer from "./footer"
@@ -17,19 +16,10 @@ import "./layout.css"
 
 const Layout = ({ children }) => {
   const { hamburgerMenuIsActive } = useContext(ThemeContext);
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header />
       <div
         style={!hamburgerMenuIsActive ? {
           margin: `0 auto`,
