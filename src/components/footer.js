@@ -9,9 +9,9 @@ const Footer = () => {
                 <img src={logo} alt="" className="footer-img"></img>
                 <div>
                     <a className="footer-menu-item" href="/"><span>Home</span></a>
-                    <a className="footer-menu-item" href="/"><span>Our Work</span></a>
-                    <a className="footer-menu-item" href="/"><span>Services</span></a>
-                    <a className="footer-menu-item" href="/"><span>Contact Us</span></a>
+                    <a className="footer-menu-item" href="/our-work-page/"><span>Our Work</span></a>
+                    <a className="footer-menu-item" href="/services-page/"><span>Services</span></a>
+                    <a className="footer-menu-item" href="/contact-us-page/"><span>Contact Us</span></a>
                 </div>
                 <div className="footer-contact">
                     <a href="mailto:Hello@thefearless.com" class="footer-email">Hello@thefearless.com</a>
