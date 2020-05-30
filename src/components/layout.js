@@ -19,11 +19,12 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header />
-      <div>
-        <main>{hamburgerMenuIsActive ? <Menu /> : <div className="fadeIn">{children}</div>}</main>
-        {hamburgerMenuIsActive ? <div /> : <Footer />}
-      </div>
+      <main>
+        <Header />
+        <Menu disabled={!hamburgerMenuIsActive ? true : false} />
+        <div className="fadeIn">{children}</div>
+        <Footer />}
+      </main>
     </>
   )
 }
