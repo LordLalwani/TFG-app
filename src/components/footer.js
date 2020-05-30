@@ -14,7 +14,7 @@ const Footer = () => {
                     <a className="footer-menu-item" href="/contact-us-page/"><span>Contact Us</span></a>
                 </div>
                 <div className="footer-contact">
-                    <a href="mailto:Hello@thefearless.com" class="footer-email">Hello@thefearless.com</a>
+                    <a href="mailto:Hello@thefearless.com" className="footer-email">Hello@thefearless.com</a>
                     <div>
                         <span className="footer-text">0800123123</span>
                         <span className="footer-copyright footer-text">© {new Date().getFullYear()} The Fearless Creative Ltd.</span>

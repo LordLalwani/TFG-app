@@ -20,14 +20,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header />
-      <div
-        style={!hamburgerMenuIsActive ? {
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-          paddingTop: '10rem'
-        } : {}}
-      >
+      <div>
         <main>{hamburgerMenuIsActive ? <Menu /> : <div className="fadeIn">{children}</div>}</main>
         {hamburgerMenuIsActive ? <div /> : <Footer />}
       </div>
