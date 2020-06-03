@@ -4,13 +4,30 @@ export const ThemeContext = createContext();
 class ThemeContextProvider extends Component {
     state = {
         hamburgerMenuIsActive: false,
-        themeIsLight: false
+
+        themes: {
+            lightTheme: {
+                fontColor: "#fff",
+                backgroundColor: "rgb(24, 20, 36)",
+                hamburgerColor: "#fff"
+            },
+            darkTheme: {
+                fontColor: "rgb(24, 20, 36)",
+                backgroundColor: "#fff",
+                hamburgerColor: "rgb(24, 20, 36)"
+            },
+        },
+        currentTheme: ""
     }
     toggleHamburgerMenu = (currentState) => {
         this.setState({ hamburgerMenuIsActive: !currentState })
     }
     toggleThemeIsLight = (boolean) => {
-        this.setState({ themeIsLight:  boolean})
+        if (boolean === true) {
+            this.setState({ currentTheme: this.state.themes.darkTheme });
+        } else {
+            this.setState({ currentTheme: this.state.themes.lightTheme })
+        }
     }
     render() {
         return (

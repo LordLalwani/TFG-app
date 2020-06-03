@@ -49,13 +49,13 @@ const unpin = () => {
 }
 
 const Header = () => {
-  const { hamburgerMenuIsActive } = useContext(ThemeContext);
+  const { hamburgerMenuIsActive, currentTheme, themes } = useContext(ThemeContext);
 
   return (
     <header id="header-id" className="header-main">
       <div className="header-container">
         <Link to="/">
-          <img src={hamburgerMenuIsActive ? fearlessLogoWhite : fearlessLogo} alt="" className="header-img" />
+          <img src={hamburgerMenuIsActive || currentTheme === themes.lightTheme ? fearlessLogoWhite : fearlessLogo} alt="" className="header-img" />
         </Link>
       </div>
       <HamburgerMenu />
