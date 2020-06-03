@@ -30,7 +30,7 @@
         left: 0px;
         right: 0px;
         transform: rotate(45deg) translate(4px, 4px);
-        background-color: white;
+        background-color: white!important;
     }
 
     .Hamburger-two-toggledOff {
@@ -43,6 +43,7 @@
         left: 0px;
         right: 0px;
         opacity: 0;
+        background-color: white!important;
     }
 
     .Hamburger-three-toggledOff {
@@ -55,7 +56,7 @@
         left: 0px;
         right: 0px;
         transform: rotate(-45deg) translate(5px, -6px);
-        background-color: white;
+        background-color: white!important;
     }
 
     &:hover {
