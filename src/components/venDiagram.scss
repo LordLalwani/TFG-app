@@ -1,0 +1,68 @@
+@font-face {
+    font-family: "Gilroy-ExtraBold";
+    src: local("Gilroy-ExtraBold"), url("../fonts/Gilroy-ExtraBold.otf") format("opentype");
+}
+
+.svgDiv {
+    padding-top: 10%;
+    padding-bottom: 20vh;
+    svg {
+        transform: scale(2.5);
+        margin-top: 15rem;
+        stroke-width: 0.2px;
+        opacity: 0.6;
+
+        animation: dash 3s ease-in;
+    }
+    h3 {
+        font-size: 1.5rem;
+        text-align: left;
+        position: absolute;
+        font-family: "Gilroy-ExtraBold";
+    }
+    .venHeading1 {
+        top: 30%;
+        left: 15%;
+    }
+    .venHeading2 {
+        top: 50%;
+        left: 75%;
+    }
+    .venHeading3 {
+        top: 90%;
+        left: 35%;
+    }
+}
+.circle {
+    width: 1rem;
+    height: 1rem;
+    background: white;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    position: absolute;
+    top: 55%;
+    left: 47%;
+    animation: glow 2s linear infinite alternate;
+}
+
+@keyframes glow {
+    to {
+        box-shadow: 0px 0px 15px 10px white
+    }
+}
+
+@keyframes dash {
+    from {
+        stroke-dasharray: 20;
+        stroke-dashoffset: 1000;
+        opacity: 0.8;
+        stroke-width: 0.3px;
+    }
+    to {
+        stroke-dasharray: 00;
+        stroke-dashoffset: 0;
+        opacity: 0.4;
+        stroke-width: 0.2px;
+    }
+}
