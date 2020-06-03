@@ -1,0 +1,92 @@
+@font-face {
+    font-family: "Gilroy-ExtraBold";
+    src: local("Gilroy-ExtraBold"), url("../fonts/Gilroy-ExtraBold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Gilroy-Light";
+    src: local("Gilroy-Light"), url("../fonts/Gilroy-Light.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Lora-Italic";
+    src: local("Lora-Italic"), url("../fonts/Lora-Italic.ttf") format("opentype");
+}
+.hero {
+    min-height: 100vh;
+
+    .hero-layout {
+        padding: 15% 20%;
+        align-items: center;
+        text-align: center;
+    }
+
+    H1 {
+        font-size: 3rem;
+        font-family: "Gilroy-ExtraBold";
+    }
+
+    .hero-svg {
+        position: relative;
+    }
+}
+
+.services-section {
+    padding: 0 15%;
+    margin-top: 10vh;
+    padding-bottom: 20vh;
+
+    h2 {
+        font-size: 3rem;
+        padding: 2rem 0rem;
+        margin: 0px 0px;
+    }
+
+    h6 {
+        font-size: 1rem;
+        font-family: "Gilroy-Light";
+        letter-spacing: 0.2rem;
+        margin: 0px 0px;
+    }
+
+    ul {
+        margin-left: 0px;
+        li {
+            text-decoration: none;
+            font-size: 1rem;
+            font-family: "Gilroy-Light";
+            list-style-type: none;
+        }
+    }
+
+    .pre-header {
+        text-align: left;
+    }
+
+    .services {
+        padding-top: 4rem;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .service-offering {
+        text-align: left;
+        padding: 1rem 1rem;
+
+        h4 {
+            font-size: 1.4rem;
+            font-family: "Gilroy-ExtraBold";
+            letter-spacing: 0.1rem;
+            margin-bottom: 0.7rem;
+        }
+
+        .service-list {
+            padding-top: 1.3rem;
+        }
+
+        .service-description {
+            font-family: "Lora-Italic";
+            font-size: 1rem;
+        }
+    }
+}
