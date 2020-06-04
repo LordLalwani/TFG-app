@@ -23,7 +23,6 @@ class ServicesPage extends Component {
         const threshold = getPrintableThreshold(intersectionRatio.toFixed(2), [0, 0.25, 0.5, 0.75, 1]) * 100
         const { toggleThemeIsLight } = this.context;
 
-        console.log(threshold)
         if (isIntersecting && threshold === 25) {
             toggleThemeIsLight(true)
         }
