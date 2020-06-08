@@ -1,0 +1,25 @@
+.form-container {
+
+    width: 80%;
+    .form-input {
+        display: flex;
+        margin: 2rem 0;
+        opacity: 0.7;
+
+        &:focus-within {
+            opacity: 1;
+        }
+
+        &:first-child {
+            margin-top: 0rem;
+        }
+    }
+
+        .form-input-last{
+          margin-bottom: 0.5rem;
+        }
+
+    .contact-button{
+        width: 100%;
+    }
+}

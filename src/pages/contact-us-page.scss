@@ -1,0 +1,93 @@
+.hero-contact {
+    min-height: 100vh;
+    transition: all 0.5s;
+
+    .hero-layout {
+        padding-bottom: 10vh;
+        padding-right: 5%;
+        padding-left: 5%;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .split-section {
+        min-height: 100vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        H1 {
+            text-align: left;
+            font-size: 3.5rem;
+            font-family: "Gilroy-ExtraBold";
+            margin-bottom: 0.5rem;
+        }
+
+        H4 {
+            text-align: left;
+            font-size: 1rem;
+            font-family: "Lora-Italic";
+            opacity: 0.8;
+        }
+
+        .split-inner {
+            margin-left: 3rem;
+            flex-direction: column;
+        }
+        .split-inner:last-child {
+            margin-left: 0px;
+        }
+    }
+}
+
+.contact-section {
+    min-height: 100vh;
+    padding: 0 10%;
+    align-items: center;
+    display: flex;
+
+    .contact-parent {
+        justify-content: space-between;
+        display: flex;
+        .contact-left-section {
+            width: 40%;
+            H3 {
+                text-align: left;
+                font-size: 2.5rem;
+                font-family: "Gilroy-Light";
+                padding-bottom: 0;
+                margin-bottom: 0.5rem;
+            }
+
+            p {
+                text-align: left;
+                font-size: 1rem;
+                font-family: "Lora-Italic";
+            }
+        }
+        .contact-right-section {
+            width: 40%;
+        }
+    }
+}
+@font-face {
+    font-family: "Gilroy-ExtraBold";
+    src: local("Gilroy-ExtraBold"), url("../fonts/Gilroy-ExtraBold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Gilroy-Light";
+    src: local("Gilroy-Light"), url("../fonts/Gilroy-Light.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Lora-Italic";
+    src: local("Lora-Italic"), url("../fonts/Lora-Italic.ttf") format("opentype");
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+}
