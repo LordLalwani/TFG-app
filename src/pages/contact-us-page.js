@@ -42,8 +42,11 @@ class ContactPage extends Component {
                                 <h1>Lets have a whiteboard <br/> session over coffee.</h1>
                                 <h4>Have an opportunity to discuss? feel free to reach out to us.</h4>
                             </div>
-                            <div style={{ width: "40%" }} className="split-inner">
-                                <GImage />
+                            <div className="split-inner">
+                                <div>
+                                <GImage/>
+                                </div>
+                
                             </div>
                         </section>
                     </div>

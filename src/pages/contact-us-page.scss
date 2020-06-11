@@ -14,6 +14,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-direction: row;
 
         H1 {
             text-align: left;
@@ -30,11 +31,13 @@
         }
 
         .split-inner {
-            margin-left: 3rem;
             flex-direction: column;
+            width: auto;
         }
         .split-inner:last-child {
+            align-self: right;
             margin-left: 0px;
+            width: 50%;
         }
     }
 }
@@ -86,8 +89,160 @@
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+    .hero-contact {
+        min-height: 100vh;
+        transition: all 0.5s;
+
+        .hero-layout {
+            padding-bottom: 10vh;
+            padding-right: 5%;
+            padding-left: 5%;
+            transition: all 0.5s ease-in-out;
+        }
+        .split-section {
+            justify-content: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            H1 {
+                text-align: center;
+                font-size: 1.8rem;
+                font-family: "Gilroy-ExtraBold";
+                margin-bottom: 0.5rem;
+            }
+
+            H4 {
+                text-align: center;
+                font-size: 0.7rem;
+                font-family: "Lora-Italic";
+                opacity: 0.8;
+            }
+
+            .split-inner {
+                flex-direction: column;
+                width: auto;
+            }
+            .split-inner:last-child {
+                align-self: center;
+                margin-left: 0px;
+                width: 100%;
+            }
+        }
+    }
+
+    .contact-section {
+        min-height: 100vh;
+        padding: 0 10%;
+        align-items: center;
+        display: flex;
+
+        .contact-parent {
+            justify-content: space-between;
+            display: flex;
+            flex-direction: column;
+            .contact-left-section {
+                width: 90%;
+                H3 {
+                    text-align: left;
+                    font-size: 2.1rem;
+                    font-family: "Gilroy-Light";
+                    padding-bottom: 0;
+                    margin-bottom: 0.5rem;
+                }
+
+                p {
+                    text-align: left;
+                    font-size: 0.7rem;
+                    font-family: "Lora-Italic";
+                }
+            }
+            .contact-right-section {
+                align-content: center;
+                align-items: center;
+                width: 100%;
+            }
+        }
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) and (max-width: 1024px) {
+    .hero-contact {
+        min-height: 100vh;
+        transition: all 0.5s;
+
+        .hero-layout {
+            padding-bottom: 10vh;
+            padding-right: 5%;
+            padding-left: 5%;
+            transition: all 0.5s ease-in-out;
+        }
+        .split-section {
+            justify-content: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            H1 {
+                text-align: center;
+                font-size: 3rem;
+                font-family: "Gilroy-ExtraBold";
+                margin-bottom: 0.5rem;
+            }
+
+            H4 {
+                text-align: center;
+                font-size: 0.7rem;
+                font-family: "Lora-Italic";
+                opacity: 0.8;
+            }
+
+            .split-inner {
+                flex-direction: column;
+                width: auto;
+            }
+            .split-inner:last-child {
+                align-self: center;
+                margin-left: 0px;
+                width: 100%;
+            }
+        }
+    }
+
+    .contact-section {
+        min-height: 100vh;
+        padding: 0 10%;
+        align-items: center;
+        display: flex;
+
+        .contact-parent {
+            justify-content: space-between;
+            display: flex;
+            flex-direction: column;
+            .contact-left-section {
+                width: 90%;
+                H3 {
+                    text-align: left;
+                    font-size: 3.1rem;
+                    font-family: "Gilroy-Light";
+                    padding-bottom: 0;
+                    margin-bottom: 0.5rem;
+                }
+
+                p {
+                    text-align: left;
+                    font-size: 1rem;
+                    font-family: "Lora-Italic";
+                }
+            }
+            .contact-right-section {
+                align-content: center;
+                align-items: center;
+                width: 100%;
+            }
+        }
+    }
 }
