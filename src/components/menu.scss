@@ -25,7 +25,24 @@
     align-items: center;
     background-color: rgb(24, 20, 36);
     z-index: 500;
-    animation: fade .2s ease-in;
+    animation: fade 0.2s ease-in;
+    flex-direction: column;
+
+    .social-section {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin: 2rem;
+
+        .social-item {
+            padding: 0 0.5rem;
+            opacity: 0.5;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
 
     .menuSectionContainer {
         height: auto;
@@ -56,6 +73,146 @@
                 &:hover {
                     color: white;
                     opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .menuMain {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        bottom: 0px;
+        right: 0px;
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        align-items: center;
+        background-color: rgb(24, 20, 36);
+        z-index: 500;
+        animation: fade 0.2s ease-in;
+        flex-direction: column;
+
+        .social-section {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            margin: 2rem;
+
+            .social-item {
+                padding: 0 0.5rem;
+                opacity: 0.5;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .menuSectionContainer {
+            height: auto;
+            text-align: right;
+            width: 100%;
+            margin: 0 auto;
+            display: inline-block;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .menuItems {
+                margin-right: 1rem;
+                float: right;
+
+                a {
+                    text-decoration: none;
+                }
+
+                .menuLink {
+                    cursor: pointer;
+                    margin-bottom: 3rem;
+                    font-family: Gilroy;
+                    color: #bbb;
+                    font-size: 3rem;
+                    animation: fade 1.5s ease-in;
+                    font-family: "Gilroy-ExtraBold";
+
+                    &:hover {
+                        color: white;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+    .menuMain {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        bottom: 0px;
+        right: 0px;
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        align-items: center;
+        background-color: rgb(24, 20, 36);
+        z-index: 500;
+        animation: fade 0.2s ease-in;
+        flex-direction: column;
+
+        .social-section {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            margin: 2rem;
+
+            .social-item {
+                padding: 0 0.5rem;
+                opacity: 0.5;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .menuSectionContainer {
+            height: auto;
+            text-align: right;
+            width: 100%;
+            margin: 0 auto;
+            display: inline-block;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .menuItems {
+                margin-right: 2rem;
+                float: right;
+
+                a {
+                    text-decoration: none;
+                }
+
+                .menuLink {
+                    cursor: pointer;
+                    margin-bottom: 6rem;
+                    font-family: Gilroy;
+                    color: #bbb;
+                    font-size: 5rem;
+                    animation: fade 1.5s ease-in;
+                    font-family: "Gilroy-ExtraBold";
+
+                    &:hover {
+                        color: white;
+                        opacity: 1;
+                    }
                 }
             }
         }

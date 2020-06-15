@@ -3,7 +3,7 @@ import "./contactForm.scss";
 import { TextField, Button } from '@material-ui/core';
 import SendIcon from '@material-ui/icons/Send';
 import { purple } from '@material-ui/core/colors';
-import { withStyles, theme } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 
 class ContactForm extends Component {
     constructor(props) {
@@ -139,7 +139,6 @@ class ContactForm extends Component {
                         variant="contained"
                         color="primary"
                         size="small"
-                        theme={theme}
                         className="contact-button"
                         disabled={!isFormValid()}
                         startIcon={<SendIcon />}>

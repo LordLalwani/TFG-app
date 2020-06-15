@@ -3,6 +3,11 @@ module.exports = {
     title: `The Fearless Group`,
     description: `Fearless description (fill out)`,
     author: `@gatsbyjs`,
+    socials: {
+      linkedIn: "https://www.linkedin.com/company/the-fearless/",
+      facebook: "https://www.facebook.com/The-Fearless-102939108131461",
+      instagram: "https://www.instagram.com/thefearlessau/"
+    }
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
