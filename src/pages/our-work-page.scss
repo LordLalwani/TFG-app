@@ -1,0 +1,22 @@
+.header-section {
+    width: 100%;
+    min-height: 40vh;
+    background-color: #f6f8fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 6rem;
+
+    H1 {
+        font-size: 3rem;
+        font-family: "Gilroy-ExtraBold";
+    }
+}
+
+.work-section{
+    min-height: 100vh;
+}
+@font-face {
+    font-family: "Gilroy-ExtraBold";
+    src: local("Gilroy-ExtraBold"), url("../fonts/Gilroy-ExtraBold.otf") format("opentype");
+}
