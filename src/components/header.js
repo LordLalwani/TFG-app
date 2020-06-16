@@ -1,5 +1,5 @@
 import { Link } from "gatsby"
-import React, { useContext } from "react"
+import React, { useContext, useEffect } from "react"
 import * as fearlessLogo from "../images/fearless-logo.svg"
 import * as fearlessLogoWhite from "../images/fearless-logo-white.svg"
 import HamburgerMenu from "../components/hamburgerMenu"
@@ -14,10 +14,6 @@ const classes = {
 let lastKnownScrollY = 0
 let headerComponent = null
 
-window.onload = function () {
-  headerComponent = document.getElementsByClassName("header-main")
-  document.addEventListener("scroll", onScroll, false)
-}
 const onScroll = () => {
   const currentScrollY = window.pageYOffset
   if (currentScrollY <= 80) {
@@ -50,6 +46,11 @@ const unpin = () => {
 
 const Header = () => {
   const { hamburgerMenuIsActive, currentTheme, themes } = useContext(ThemeContext);
+
+  useEffect(() => {
+    headerComponent = document.getElementsByClassName("header-main")
+    document.addEventListener("scroll", onScroll, false)
+  }, []);
 
   return (
     <header id="header-id" className="header-main">
