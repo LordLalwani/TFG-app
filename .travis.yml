@@ -7,7 +7,7 @@ deploy:
   provider: s3
   access_key_id: $AWS_KEY
   secret_access_key: $AWS_SECRET
-  bucket: 'thefearless.com.au'
+  bucket: 'fearless.com.au'
   skip_cleanup: true
   acl: public_read
   local_dir: public
