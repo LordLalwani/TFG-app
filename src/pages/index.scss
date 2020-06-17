@@ -1,0 +1,33 @@
+@font-face {
+    font-family: "Gilroy-ExtraBold";
+    src: local("Gilroy-ExtraBold"), url("../fonts/Gilroy-ExtraBold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Gilroy-Light";
+    src: local("Gilroy-Light"), url("../fonts/Gilroy-Light.otf") format("opentype");
+}
+
+.hero-section {
+
+    H1 {
+        font-size: 6rem;
+        font-family: "Gilroy-ExtraBold";
+        color: rgb(24, 20, 36);
+    }
+
+    H3 {
+        font-size: 1.2rem;
+        color: gray;
+        font-family: "Gilroy-Light";
+    }
+
+    margin: 0px 10%;
+    text-align: left;
+    min-width: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+}
