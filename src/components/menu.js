@@ -31,9 +31,9 @@ const Menu = ({ disabled }) => {
                 <div className="menuMain">
                     <section className="menuSectionContainer">
                         <div className="menuItems">
-                            <a href="/our-work-page/"><div className="menuLink">Our Work</div></a>
-                            <a href="/services-page/"> <div className="menuLink">Services</div></a>
-                            <a href="/contact-us-page/"> <div className="menuLink">Contact Us</div></a>
+                            <a href="/Our-Work"><div className="menuLink">Our Work</div></a>
+                            <a href="/Services"> <div className="menuLink">Services</div></a>
+                            <a href="/Contact-Us"> <div className="menuLink">Contact Us</div></a>
                         </div>
                     </section>
                     <div className="social-section">
