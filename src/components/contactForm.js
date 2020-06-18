@@ -4,27 +4,33 @@ import { TextField, Button } from '@material-ui/core';
 import SendIcon from '@material-ui/icons/Send';
 import { purple } from '@material-ui/core/colors';
 import { withStyles } from '@material-ui/core/styles';
+import ReCAPTCHA from "react-google-recaptcha";
 
 class ContactForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            allValuesFilled: false,
             contactFormValidation: {
                 tf1: {
                     valid: true,
-                    errorMessage: null
+                    errorMessage: null,
+                    value: null
                 },
                 tf2: {
                     valid: true,
-                    errorMessage: null
+                    errorMessage: null,
+                    value: null
                 },
                 tf3: {
                     valid: true,
-                    errorMessage: null
+                    errorMessage: null,
+                    value: null
                 },
                 tf4: {
                     valid: true,
-                    errorMessage: null
+                    errorMessage: null,
+                    value: null
                 }
             }
         };
@@ -58,6 +64,12 @@ class ContactForm extends Component {
             updatedState[tf].errorMessage = errorMessage;
             this.setState({ updatedState })
         }
+        const updateValidationValueState = (tf, incomingValue) => {
+            const updatedState = { ...this.state.contactFormValidation }
+            updatedState[tf].value = incomingValue;
+            this.setState({ updatedState })
+        }
+
 
         const hasNumbers = (value) => {
             return /\d/g.test(value);
@@ -114,8 +126,26 @@ class ContactForm extends Component {
             }
         }
 
+        const updateAllValuesFilled = () => {
+            const tfs = Object.keys(this.state.contactFormValidation)
+            const size = Object.keys(this.state.contactFormValidation).length;
+            let count = 0
+            tfs.forEach((tf) => {
+                const value = this.state.contactFormValidation[tf].value;
+                if (value !== null && value !== "") {
+                    count++
+                }
+            })
+            if (count === size) {
+                this.setState({ allValuesFilled: true })
+            } else {
+                this.setState({ allValuesFilled: false })
+            }
+        }
+
         const handleTextFieldChange = (event, tf) => {
             const value = event.target.value;
+            updateValidationValueState(tf, value);
 
             if (tf === "tf1") {
                 handleNameValidations(tf, value)
@@ -125,6 +155,10 @@ class ContactForm extends Component {
                 handleMobileNumberValidations(tf, value)
             }
 
+            updateAllValuesFilled()
+        }
+        const onChange = (value) => {
+            console.log("Captcha value:", value);
         }
         const { tf1, tf2, tf3, tf4 } = this.state.contactFormValidation;
         return (
@@ -134,13 +168,21 @@ class ContactForm extends Component {
                     <TextField type="email" id="email" label="Email" className="form-input" onChange={(e) => handleTextFieldChange(e, "tf2")} error={!tf2.valid} helperText={tf2.errorMessage !== null ? tf2.errorMessage : ""} />
                     <TextField type="tel" id="phone" label="A number we can contact you on" className="form-input" onChange={(e) => handleTextFieldChange(e, "tf3")} error={!tf3.valid} helperText={tf3.errorMessage !== null ? tf3.errorMessage : ""} />
                     <TextField multiline rows={4} size="small" label="How can we help ?" className="form-input form-input-last" onChange={(e) => handleTextFieldChange(e, "tf4")} error={!tf4.valid} helperText={tf4.errorMessage !== null ? tf4.errorMessage : ""} />
+                    {this.state.allValuesFilled ?
+                        <div className="recaptcha">
+                            <ReCAPTCHA
+                                sitekey="6LdGPaYZAAAAAMWZ_QVUIeVO9KwfldT8NF7djvVY"
+                                onChange={onChange}
+                            />
+                        </div>
+                        : null}
                     <ColorButton
                         type="submit"
                         variant="contained"
                         color="primary"
                         size="small"
                         className="contact-button"
-                        disabled={!isFormValid()}
+                        disabled={!isFormValid() || !this.state.allValuesFilled}
                         startIcon={<SendIcon />}>
                         Send
                     </ColorButton>
