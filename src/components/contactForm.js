@@ -11,6 +11,7 @@ class ContactForm extends Component {
         super(props);
         this.state = {
             allValuesFilled: false,
+            recaptchaValue: null,
             contactFormValidation: {
                 tf1: {
                     valid: true,
@@ -157,8 +158,8 @@ class ContactForm extends Component {
 
             updateAllValuesFilled()
         }
-        const onChange = (value) => {
-            console.log("Captcha value:", value);
+        const onRecaptchaChange = (value) => {
+            this.setState({ recaptchaValue: value })
         }
         const { tf1, tf2, tf3, tf4 } = this.state.contactFormValidation;
         return (
@@ -171,8 +172,8 @@ class ContactForm extends Component {
                     {this.state.allValuesFilled ?
                         <div className="recaptcha">
                             <ReCAPTCHA
-                                sitekey="6LdGPaYZAAAAAMWZ_QVUIeVO9KwfldT8NF7djvVY"
-                                onChange={onChange}
+                                sitekey={process.env.GATSBY_GOOGLE_SITE_KEY}
+                                onChange={onRecaptchaChange}
                             />
                         </div>
                         : null}
@@ -182,7 +183,7 @@ class ContactForm extends Component {
                         color="primary"
                         size="small"
                         className="contact-button"
-                        disabled={!isFormValid() || !this.state.allValuesFilled}
+                        disabled={!isFormValid() || !this.state.allValuesFilled || !this.state.recaptchaValue}
                         startIcon={<SendIcon />}>
                         Send
                     </ColorButton>
