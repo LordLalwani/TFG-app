@@ -6,35 +6,38 @@ import { purple } from '@material-ui/core/colors';
 import { withStyles } from '@material-ui/core/styles';
 import ReCAPTCHA from "react-google-recaptcha";
 
+
+const initialState = {
+    allValuesFilled: false,
+    recaptchaValue: null,
+    ZapierResponse: null,
+    contactFormValidation: {
+        tf1: {
+            valid: true,
+            errorMessage: null,
+            value: null
+        },
+        tf2: {
+            valid: true,
+            errorMessage: null,
+            value: null
+        },
+        tf3: {
+            valid: true,
+            errorMessage: null,
+            value: null
+        },
+        tf4: {
+            valid: true,
+            errorMessage: null,
+            value: null
+        }
+    }
+};
 class ContactForm extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            allValuesFilled: false,
-            recaptchaValue: null,
-            contactFormValidation: {
-                tf1: {
-                    valid: true,
-                    errorMessage: null,
-                    value: null
-                },
-                tf2: {
-                    valid: true,
-                    errorMessage: null,
-                    value: null
-                },
-                tf3: {
-                    valid: true,
-                    errorMessage: null,
-                    value: null
-                },
-                tf4: {
-                    valid: true,
-                    errorMessage: null,
-                    value: null
-                }
-            }
-        };
+        this.state = initialState;
     }
 
     render() {
@@ -162,9 +165,39 @@ class ContactForm extends Component {
             this.setState({ recaptchaValue: value })
         }
         const { tf1, tf2, tf3, tf4 } = this.state.contactFormValidation;
+
+        const submit = async (e) => {
+
+            const formState = {
+                name: this.state.contactFormValidation.tf1,
+                email: this.state.contactFormValidation.tf2,
+                number: this.state.contactFormValidation.tf3,
+                message: this.state.contactFormValidation.tf4,
+            }
+
+            e.preventDefault()
+            const response = await fetch(process.env.GATSBY_ZAPIER_API, {
+                method: 'POST',
+                body: JSON.stringify(formState),
+            }).then(function (a) {
+                return a.json();
+            })
+
+            this.setState({
+                ZapierResponse: response.status
+            })
+            resetForm(response.status)
+        }
+
+        const resetForm = (responseStatus) => {
+            this.setState(initialState);
+            this.setState({ ZapierResponse: responseStatus })
+        }
+
+        const name = this.state.contactFormValidation.tf1.value
         return (
             <div>
-                <form method="post" action="#" className="form-container">
+                <form onSubmit={submit} className="form-container" hidden={(this.state.ZapierResponse === 'success' ? true : false)}>
                     <TextField type="text" id="name" label="Your full name" className="form-input" onChange={(e) => handleTextFieldChange(e, "tf1")} error={!tf1.valid} helperText={tf1.errorMessage !== null ? tf1.errorMessage : ""} />
                     <TextField type="email" id="email" label="Email" className="form-input" onChange={(e) => handleTextFieldChange(e, "tf2")} error={!tf2.valid} helperText={tf2.errorMessage !== null ? tf2.errorMessage : ""} />
                     <TextField type="tel" id="phone" label="A number we can contact you on" className="form-input" onChange={(e) => handleTextFieldChange(e, "tf3")} error={!tf3.valid} helperText={tf3.errorMessage !== null ? tf3.errorMessage : ""} />
@@ -188,6 +221,15 @@ class ContactForm extends Component {
                         Send
                     </ColorButton>
                 </form>
+
+                {this.state.ZapierResponse === 'success' ?
+                    <div className="fadeInMessage">
+                        <div>
+                            <h3 className="success-response">Great News, {name}!</h3>
+                            <div className="success-response-message">We've received your message, we'll be in touch soon!</div>
+                        </div>
+                    </div>
+                    : null}
             </div>
         )
     }

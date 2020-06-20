@@ -1,3 +1,26 @@
+@font-face {
+    font-family: "Lora-Italic";
+    src: local("Lora-Italic"), url("../fonts/Lora-Italic.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: "Gilroy-Light";
+    src: local("Gilroy-Light"), url("../fonts/Gilroy-Light.otf") format("opentype");
+}
+
+.fadeInMessage {
+    animation: fadeMessage 2s ease-in;
+}
+
+@keyframes fadeMessage {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 .form-container {
     width: 80%;
     .form-input {
@@ -23,6 +46,17 @@
     }
 }
 
+.success-response {
+    text-align: left;
+    font-size: 2.5rem;
+    font-family: "Gilroy-Light";
+    padding-bottom: 0;
+    margin-bottom: 0.5rem;
+}
+.success-response-message {
+    font-family: "Lora-Italic";
+}
+
 .recaptcha {
     opacity: 0.8;
     display: flex;
@@ -34,11 +68,32 @@
     .form-container {
         width: 100%;
     }
+    .success-response {
+        text-align: left;
+        font-size: 2rem;
+        font-family: "Gilroy-Light";
+        padding-bottom: 0;
+        margin-bottom: 0.5rem;
+    }
+    .success-response-message {
+        font-family: "Lora-Italic";
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) and (max-width: 1024px) {
     .form-container {
         width: 100%;
+    }
+    .success-response {
+        text-align: left;
+        font-size: 3rem;
+        font-family: "Gilroy-Light";
+        padding-bottom: 0;
+        margin-bottom: 0.5rem;
+    }
+    .success-response-message {
+        font-family: "Lora-Italic";
+        font-family: 1rem;
     }
 }
