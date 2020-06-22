@@ -5,23 +5,30 @@ module.exports = {
   siteMetadata: {
     title: `The Fearless Group`,
     description: `Fearless description (fill out)`,
-    author: `@gatsbyjs`,
+    author: `Deep Lalwani`,
     socials: {
       linkedIn: "https://www.linkedin.com/company/the-fearless/",
       facebook: "https://www.facebook.com/The-Fearless-102939108131461",
       instagram: "https://www.instagram.com/thefearlessau/"
-    }
+    },
+    siteUrl: `https://www.thefearless.com.au`,
   },
   plugins: [
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: process.env.GATSBY_GOOGLE_ANALYTICS_TRACKING_ID, 
+        trackingId: process.env.GATSBY_GOOGLE_ANALYTICS_TRACKING_ID,
         head: true,
         anonymize: true,
         respectDNT: true,
         pageTransitionDelay: 0,
       },
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+    },
+    {
+      resolve: `gatsby-plugin-robots-txt`,
     },
     `gatsby-plugin-react-helmet`,
     {
