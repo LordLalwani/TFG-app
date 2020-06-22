@@ -6,6 +6,7 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import { grey } from '@material-ui/core/colors';
 import { useStaticQuery, graphql } from "gatsby"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 const Menu = ({ disabled }) => {
 
@@ -37,15 +38,15 @@ const Menu = ({ disabled }) => {
                         </div>
                     </section>
                     <div className="social-section">
-                        <a rel="noreferrer" target="_blank" href={site.siteMetadata.socials.linkedIn} className="social-item">
+                        <OutboundLink rel="noreferrer" target="_blank" href={site.siteMetadata.socials.linkedIn} className="social-item">
                             <LinkedInIcon fontSize="large" style={{ color: grey[50] }} />
-                        </a>
-                        <a rel="noreferrer" target="_blank" href={site.siteMetadata.socials.instagram} className="social-item">
+                        </OutboundLink>
+                        <OutboundLink rel="noreferrer" target="_blank" href={site.siteMetadata.socials.instagram} className="social-item">
                             <InstagramIcon fontSize="large" style={{ color: grey[50] }} />
-                        </a>
-                        <a rel="noreferrer" target="_blank" href={site.siteMetadata.socials.facebook} className="social-item">
+                        </OutboundLink>
+                        <OutboundLink rel="noreferrer" target="_blank" href={site.siteMetadata.socials.facebook} className="social-item">
                             <FacebookIcon fontSize="large" style={{ color: grey[50] }} />
-                        </a>
+                        </OutboundLink>
                     </div>
                 </div>
             </Fade>

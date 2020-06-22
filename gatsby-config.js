@@ -1,3 +1,6 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 module.exports = {
   siteMetadata: {
     title: `The Fearless Group`,
@@ -10,6 +13,16 @@ module.exports = {
     }
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.GATSBY_GOOGLE_ANALYTICS_TRACKING_ID, 
+        head: true,
+        anonymize: true,
+        respectDNT: true,
+        pageTransitionDelay: 0,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,

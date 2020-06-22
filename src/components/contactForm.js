@@ -5,7 +5,7 @@ import SendIcon from '@material-ui/icons/Send';
 import { purple } from '@material-ui/core/colors';
 import { withStyles } from '@material-ui/core/styles';
 import ReCAPTCHA from "react-google-recaptcha";
-
+import { trackCustomEvent } from "gatsby-plugin-google-analytics"
 
 const initialState = {
     allValuesFilled: false,
@@ -187,6 +187,12 @@ class ContactForm extends Component {
                 ZapierResponse: response.status
             })
             resetForm(response.status)
+
+            trackCustomEvent({
+                category: "Contact Form",
+                action: "Submit",
+                label: "Contact Form Submission"
+            })
         }
 
         const resetForm = (responseStatus) => {
