@@ -201,13 +201,17 @@ class ContactForm extends Component {
         }
 
         const name = this.state.contactFormValidation.tf1.value
+        let firstName = ""
+        if (name) {
+            firstName = name.split(" ");
+        }
         return (
             <div>
                 <form onSubmit={submit} className="form-container" hidden={(this.state.ZapierResponse === 'success' ? true : false)}>
                     <TextField type="text" id="name" label="Your full name" className="form-input" onChange={(e) => handleTextFieldChange(e, "tf1")} error={!tf1.valid} helperText={tf1.errorMessage !== null ? tf1.errorMessage : ""} />
                     <TextField type="email" id="email" label="Email" className="form-input" onChange={(e) => handleTextFieldChange(e, "tf2")} error={!tf2.valid} helperText={tf2.errorMessage !== null ? tf2.errorMessage : ""} />
                     <TextField type="tel" id="phone" label="A number we can contact you on" className="form-input" onChange={(e) => handleTextFieldChange(e, "tf3")} error={!tf3.valid} helperText={tf3.errorMessage !== null ? tf3.errorMessage : ""} />
-                    <TextField multiline rows={4} size="small" label="How can we help ?" className="form-input form-input-last" onChange={(e) => handleTextFieldChange(e, "tf4")} error={!tf4.valid} helperText={tf4.errorMessage !== null ? tf4.errorMessage : ""} />
+                    <TextField multiline rows={4} size="small" label={`What's on your mind today ${this.state.contactFormValidation.tf1.value === null ? "" : firstName[0]} ?`} className="form-input form-input-last" onChange={(e) => handleTextFieldChange(e, "tf4")} error={!tf4.valid} helperText={tf4.errorMessage !== null ? tf4.errorMessage : ""} />
                     {this.state.allValuesFilled ?
                         <div className="recaptcha">
                             <ReCAPTCHA

@@ -55,7 +55,7 @@ class ContactPage extends Component {
                             <div className="contact-parent">
                                 <div className="contact-left-section">
                                     <h3 className="">We would love to <br />hear from you.</h3>
-                                    <p>Either for new business inquiries, media requests, feedback or just to have a chat. Drop us a line and we will get back to you as soon as we can. We promise.</p>
+                                    <p>To discuss new business inquiries, media/press requests, feedback or just to have a quick chat. Fill out our form and we will get back to you as soon as we can. We promise.</p>
                                 </div>
                                 <div className="contact-right-section">
                                     <ContactForm />
