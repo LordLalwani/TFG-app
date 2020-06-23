@@ -5,7 +5,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import { grey } from '@material-ui/core/colors';
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 const Menu = ({ disabled }) => {
@@ -32,9 +32,9 @@ const Menu = ({ disabled }) => {
                 <div className="menuMain">
                     <section className="menuSectionContainer">
                         <div className="menuItems">
-                            <a href="/Our-Work"><div className="menuLink">Our Work</div></a>
-                            <a href="/Services"> <div className="menuLink">Services</div></a>
-                            <a href="/Contact-Us"> <div className="menuLink">Contact Us</div></a>
+                            <Link to="/Our-Work"><div className="menuLink">Our Work</div></Link>
+                            <Link to="/Services"> <div className="menuLink">Services</div></Link>
+                            <Link to="/Contact-Us"> <div className="menuLink">Contact Us</div></Link>
                         </div>
                     </section>
                     <div className="social-section">

@@ -5,7 +5,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import { grey } from '@material-ui/core/colors';
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 const Footer = () => {
@@ -31,10 +31,10 @@ const Footer = () => {
             <section className="footer-container">
                 <img src={logo} alt="" className="footer-img"></img>
                 <div>
-                    <a className="footer-menu-item" href="/"><span>Home</span></a>
-                    <a className="footer-menu-item" href="/Our-Work"><span>Our Work</span></a>
-                    <a className="footer-menu-item" href="/Services"><span>Services</span></a>
-                    <a className="footer-menu-item" href="/Contact-Us"><span>Contact Us</span></a>
+                    <Link className="footer-menu-item" to="/"><span>Home</span></Link>
+                    <Link className="footer-menu-item" to="/Our-Work/"><span>Our Work</span></Link>
+                    <Link className="footer-menu-item" to="/Services"><span>Services</span></Link>
+                    <Link className="footer-menu-item" to="/Contact-Us"><span>Contact Us</span></Link>
                 </div>
                 <div className="footer-contact">
                     <div className="contact-segment">
