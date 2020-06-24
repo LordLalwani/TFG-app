@@ -6,7 +6,8 @@ import withThemeContext from "../utils/withThemeContext"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="The Fearless | Melbourne's Creative Agency."
+      description="The Fearless is a Creative Agency based in Melbourne specialised in creating breathtaking user expereinces through digital engineering solutions." />
     <section className="hero-section">
       <h1>Your Next Digital Innovations Partner.</h1>
       <h3>We design, build and launch <u>user experiences.</u></h3>

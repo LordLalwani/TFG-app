@@ -3,8 +3,8 @@ require("dotenv").config({
 })
 module.exports = {
   siteMetadata: {
-    title: `The Fearless Group`,
-    description: `Fearless description (fill out)`,
+    title: `The Fearless | Melbourne's Creative Agency.`,
+    description: `The Fearless is a Creative Agency based in Melbourne specialised in creating breathtaking user expereinces through bespoke digital engineering solutions.`,
     author: `Deep Lalwani`,
     socials: {
       linkedIn: "https://www.linkedin.com/company/the-fearless/",
@@ -40,6 +40,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    'gatsby-plugin-offline',
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -53,8 +54,5 @@ module.exports = {
         icon: `src/images/fearless-favicon.png`, // This path is relative to the root of the site.
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 }

@@ -34,19 +34,20 @@ class ContactPage extends Component {
         return (
 
             <Layout>
-                <SEO title="Home" />
+                <SEO title="The Fearless are here to help you with all of your digital Strategy, Design & developement needs. Please contact us at our local Melbourne office."
+                    description="Feel the tingling in your fingertips? We're excited to start your project too. Get in contact with The Fearless. " />
                 <div className="hero-contact" style={{ color: currentTheme.fontColor, backgroundColor: currentTheme.backgroundColor }}>
                     <div className="hero-layout" style={{ opacity: (currentTheme === themes.lightTheme ? 1 : 0) }}>
                         <section className="split-section">
                             <div className="split-inner">
-                                <h1>Lets have a whiteboard <br/> session over coffee.</h1>
+                                <h1>Lets have a whiteboard <br /> session over coffee.</h1>
                                 <h4>Have an opportunity to discuss? feel free to reach out to us.</h4>
                             </div>
                             <div className="split-inner">
                                 <div>
-                                <GImage/>
+                                    <GImage />
                                 </div>
-                
+
                             </div>
                         </section>
                     </div>

@@ -35,7 +35,8 @@ class ServicesPage extends Component {
         const { currentTheme, themes } = this.context;
         return (
             <Layout>
-                <SEO title="Home" />
+                <SEO title="Melbourne experts in Website Design, User Experience and Digital Solutions."
+                    description="The Fearless is a Creative Agency based In Melbourne, our three key offerings are Strategy, Design & Developement." />
                 <div className="hero" style={{ color: currentTheme.fontColor, backgroundColor: currentTheme.backgroundColor }}>
                     <div className="hero-layout" style={{ opacity: (currentTheme === themes.lightTheme ? 1 : 0) }}>
                         <header>
