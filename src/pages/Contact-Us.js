@@ -41,7 +41,7 @@ class ContactPage extends Component {
                         <section className="split-section">
                             <div className="split-inner">
                                 <h1>Lets have a whiteboard <br /> session over coffee.</h1>
-                                <h4>Have an opportunity to discuss? feel free to reach out to us.</h4>
+                                <h4>Have an opportunity to discuss? Feel free to reach out to us.</h4>
                             </div>
                             <div className="split-inner">
                                 <div>

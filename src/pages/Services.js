@@ -71,7 +71,7 @@ class ServicesPage extends Component {
                                 </article>
                                 <article className="service-offering">
                                     <h4>Development</h4>
-                                    <p className="service-description">At the end of day, we're just a bunch of nerdy engineers who want to build prototypes and measure results.</p>
+                                    <p className="service-description">At the end of day, we want to build prototypes and measure results.</p>
                                     <ul className="service-list">
                                         <li>Static Websites</li>
                                         <li>Web Applications</li>
