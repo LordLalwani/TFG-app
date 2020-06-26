@@ -74,6 +74,7 @@
         .service-description {
             font-family: "Lora-Italic";
             font-size: 1rem;
+            text-align: left;
         }
     }
 }
@@ -98,32 +99,32 @@
         min-height: 100vh;
         transition: all 0.5s;
         padding: 5%;
-    
+
         .hero-layout {
             min-height: 100vh;
             padding: 40vh 0px 0px 0px;
             align-items: center;
             text-align: center;
         }
-    
+
         H1 {
             font-size: 2.5rem;
             font-family: "Gilroy-ExtraBold";
         }
-    
+
         .hero-svg {
             position: relative;
         }
     }
-    .services-section{
+    .services-section {
         padding: 5%;
 
-        .services{
+        .services {
             flex-direction: column;
             padding-top: 0px;
         }
     }
-    .pre-header{
+    .pre-header {
         h2 {
             font-size: 2rem;
         }
@@ -136,36 +137,34 @@
         min-height: 100vh;
         transition: all 0.5s;
         padding: 5%;
-    
+
         .hero-layout {
             min-height: 100vh;
             padding: 40vh 0px 0px 0px;
             align-items: center;
             text-align: center;
         }
-    
+
         H1 {
             font-size: 2.5rem;
             font-family: "Gilroy-ExtraBold";
         }
-    
+
         .hero-svg {
             position: relative;
         }
     }
-    .services-section{
+    .services-section {
         padding: 5%;
 
-        .services{
+        .services {
             flex-direction: row;
             padding-top: 0px;
         }
     }
-    .pre-header{
+    .pre-header {
         h2 {
             font-size: 2rem;
         }
     }
-    
 }
-

@@ -57,7 +57,7 @@ class ServicesPage extends Component {
                                     <h4>Strategy</h4>
                                     <p className="service-description">Our approach combines the worlds of business, technology and UX with a human-centred approach.</p>
                                     <ul className="service-list">
-                                        <li>Research & Insights</li>
+                                        <li>Ideation</li>
                                         <li>Technical Sencemaking</li>
                                     </ul>
                                 </article>
@@ -66,12 +66,11 @@ class ServicesPage extends Component {
                                     <p className="service-description">We value our craft and work with clients who understand the importance of investing in design.</p>
                                     <ul className="service-list">
                                         <li>User Experience</li>
-                                        <li>Digital Branding</li>
                                     </ul>
                                 </article>
                                 <article className="service-offering">
                                     <h4>Development</h4>
-                                    <p className="service-description">At the end of day, we want to build prototypes and measure results.</p>
+                                    <p className="service-description">Our passion for technology drives us to build prototypes and measure results.</p>
                                     <ul className="service-list">
                                         <li>Static Websites</li>
                                         <li>Web Applications</li>
