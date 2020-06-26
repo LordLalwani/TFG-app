@@ -9,12 +9,14 @@ class ThemeContextProvider extends Component {
             lightTheme: {
                 fontColor: "#fff",
                 backgroundColor: "rgb(24, 20, 36)",
-                hamburgerColor: "#fff"
+                hamburgerColor: "#fff",
+                boxShadows: "rgba(0, 0, 0, 0.8)"
             },
             darkTheme: {
                 fontColor: "rgb(24, 20, 36)",
                 backgroundColor: "#fff",
-                hamburgerColor: "rgb(24, 20, 36)"
+                hamburgerColor: "rgb(24, 20, 36)",
+                boxShadows: "rgba(0, 0, 0, 0.8)"
             },
         },
         currentTheme: ""

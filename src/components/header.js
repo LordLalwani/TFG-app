@@ -53,7 +53,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header id="header-id" className="header-main" style={{backgroundColor:currentTheme.backgroundColor}}>
+    <header id="header-id" className="header-main" style={{ backgroundColor: hamburgerMenuIsActive ? "rgb(24, 20, 36)" : currentTheme.backgroundColor, boxShadow: hamburgerMenuIsActive ? "" : `0px 7px 10px -8px ${currentTheme.boxShadows}` }}>
       <div className="header-container">
         <Link to="/">
           <img src={hamburgerMenuIsActive || currentTheme === themes.lightTheme ? fearlessLogoWhite : fearlessLogo} alt="" className="header-img" />
