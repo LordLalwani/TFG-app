@@ -1,0 +1,81 @@
+{
+  "Main" : {
+    "uid" : {
+      "type" : "UID",
+      "config" : {
+        "label" : "case-studies"
+      }
+    },
+    "project_and_client_name" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading6",
+        "label" : "Project And Client Name"
+      }
+    },
+    "project_statement" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1, heading2, heading3",
+        "label" : "Project statement"
+      }
+    },
+    "services_offered" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+        "label" : "Services Offered"
+      }
+    },
+    "project_year" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1, heading2, heading3, heading4, heading5, heading6",
+        "label" : "project_year"
+      }
+    },
+    "project_client" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1, heading2, heading3, heading4, heading5, heading6",
+        "label" : "project client"
+      }
+    },
+    "project_hero_image" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "Project Hero Image"
+      }
+    },
+    "getting_started" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+        "label" : "Getting Started"
+      }
+    },
+    "ideation" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+        "label" : "Ideation"
+      }
+    },
+    "what_we_built" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+        "label" : "What We Built"
+      }
+    },
+    "our_learnings" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+        "label" : "Our Learnings"
+      }
+    }
+  }
+}

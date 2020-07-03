@@ -6,7 +6,7 @@ const withThemeContext = Component => {
         render() {
             return (
                 <ThemeContextProvider>
-                    <Component />
+                    <Component {...this.props} />
                 </ThemeContextProvider>
             )
         }

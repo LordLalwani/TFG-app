@@ -54,5 +54,26 @@ module.exports = {
         icon: `src/images/fearless-favicon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-source-prismic`,
+      options: {
+        repositoryName: `TheFearless`,
+        accessToken: process.env.GATSBY_PRISMIC_ACCESS_TOKEN,
+        linkResolver: ({ node, key, value }) => post => `/${post.uid}`,
+        schemas: {
+          page: require('./src/schemas/caseStudies.json'),
+        },
+        htmlSerializer: ({ node, key, value }) => (
+          type,
+          element,
+          content,
+          children,
+        ) => {
+          switch(type) {
+            case paragraph: return `<p>${children.join('')}</p>`;
+          }
+        },
+      },
+    }
   ],
 }

@@ -13,7 +13,7 @@ class IndexPage extends Component {
     const { toggleThemeIsLight } = this.context;
     toggleThemeIsLight(true)
   }
-  
+
   render() {
     return (
       <Layout>

@@ -1,0 +1,79 @@
+@font-face {
+    font-family: "Gilroy-Light";
+    src: local("Gilroy-Light"), url("../fonts/Gilroy-Light.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Gilroy-ExtraBold";
+    src: local("Gilroy-ExtraBold"), url("../fonts/Gilroy-ExtraBold.otf") format("opentype");
+}
+
+.banner {
+    margin-top: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h6 {
+        font-family: "Gilroy-Light";
+        font-size: 1rem;
+        letter-spacing: 2px;
+    }
+
+    h1 {
+        font-family: "Gilroy-ExtraBold";
+    }
+}
+
+.hero-image {
+    padding-top: 5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .case-study-image {
+        width: 30%;
+    }
+}
+
+.main-content {
+    margin: 0 20%;
+
+    .content-section{
+        min-height: 50vh;
+        padding: 5rem 0px;
+    }
+}
+
+.project-breakdown {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(24, 20, 36);
+    height: auto;
+    width: 100;
+    padding: 5rem 20%;
+    color: white;
+    justify-content: space-evenly;
+
+    h5 {
+        font-family: "Gilroy-Light";
+        letter-spacing: 2px;
+        opacity: 1;
+    }
+
+    .project-section {
+        width: 30%;
+        hr {
+            width: auto;
+            border-top: 1px solid white;
+            opacity: 0.3;
+        }
+        p {
+            font-family: "Gilroy-Light";
+            opacity: 0.8;
+        }
+    }
+}
